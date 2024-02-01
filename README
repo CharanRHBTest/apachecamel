@@ -1,1 +1,10 @@
 Apache Camel with CamelObservation
+
+As we can see there is a traceparent issue is prining
+
+2024-02-01T20:27:58.412+08:00  INFO [apachecamel, 65bb8e4d61f28a66ecf09555e458103d,ecf09555e458103d] 18896 --- [//rest-consumer] i.m.tracing.brave.bridge.W3CPropagation  : Unparseable traceparent header. Returning INVALID span context.
+2024-02-01T20:27:58.413+08:00  INFO [apachecamel, 65bb8e4e377a8a98a573c1898c75c384,ed6412e8e6b136e2] 18896 --- [//rest-consumer] route1                                   : Testing trace id and span id
+2024-02-01T20:27:58.413+08:00  INFO [apachecamel, 65bb8e4e377a8a98a573c1898c75c384,ed6412e8e6b136e2] 18896 --- [//rest-consumer] c.apache.camel.rest.RestConsumerRoute    : printing something
+2024-02-01T20:27:58.414+08:00  INFO [apachecamel, 65bb8e4e377a8a98a573c1898c75c384,a573c1898c75c384] 18896 --- [//rest-consumer] timerRoute                               : Calling another route is done.
+2024-02-01T20:27:59.412+08:00  INFO [apachecamel, 65bb8e4e377a8a98a573c1898c75c384,a573c1898c75c384] 18896 --- [//rest-consumer] i.m.tracing.brave.bridge.W3CPropagation  : Unparseable traceparent header. Returning INVALID span context.
+2024-02-01T20:27:59.413+08:00  INFO [apachecamel, 65bb8e4f9c8eb487ebc676831a80b4bc,87aebc4bde05ca19] 18896 --- [//rest-consumer] route1                                   : Testing trace id and span id
