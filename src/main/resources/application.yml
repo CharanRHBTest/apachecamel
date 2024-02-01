@@ -1,0 +1,17 @@
+#camel.springboot.main-run-controller=true
+
+server:
+  port: 8080
+
+logging:
+  pattern:
+    level: "%5p [${spring.application.name:}, %X{traceId:-},%X{spanId:-}]"
+
+spring:
+  application:
+    name: apachecamel
+
+camel:
+  springboot:
+    use-mdc-logging: true
+    mdc-logging-keys-pattern: "*"
